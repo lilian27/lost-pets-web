@@ -19,6 +19,7 @@ export default defineConfig({
     screenshot: 'on',
     ...devices['Desktop Chrome'],
     viewport: { width: 1280, height: 800 },
+    launchOptions: { slowMo: Number(process.env.SLOW_MO ?? 0) },
   },
   webServer: process.env.WEB_URL
     ? undefined

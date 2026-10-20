@@ -21,6 +21,7 @@ MONGODB_URI=mongodb://localhost:27017/lost-pets-e2e npm run start:dev           
 npm install && npx playwright install --with-deps chromium
 npm run e2e        # starts `vite --port 5173` with VITE_API_URL=http://localhost:3000 unless WEB_URL is set
 npx playwright show-report                                    # HTML report with screenshots, video and trace per test
+SLOW_MO=500 npx playwright test --headed --timeout=240000   # watch the flow live in a visible browser
 ```
 
 Env overrides: `API_URL` (default `http://localhost:3000`), `WEB_URL` (if set, the suite uses that server instead of starting Vite).
